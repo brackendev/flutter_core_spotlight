@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:core';
 import 'dart:convert';
+import 'dart:ui';
 
 import 'package:flutter/services.dart';
 
@@ -35,9 +37,9 @@ class FlutterSpotlightItem {
   final String attributeTitle;
   final String domainIdentifier;
   final String uniqueIdentifier;
-  final Date? endDate;
+  final DateTime? endDate;
   final Image? thumbnailImage;
-  final Date? startDate;
+  final DateTime? startDate;
 
   Map<String, dynamic> toMap() {
     return {
