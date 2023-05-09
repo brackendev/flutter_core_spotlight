@@ -26,6 +26,18 @@ public class SwiftFlutterCoreSpotlightPlugin: NSObject, FlutterPlugin {
         let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
         attributeSet.title = itemMap["attributeTitle"] as? String
         attributeSet.contentDescription = itemMap["attributeDescription"] as? String
+                                           
+        if let endDate = itemMap["endDate"] as? Date {
+            attributeSet.endDate = endDate
+        }
+                                           
+        if let thumbnailData = itemMap["thumbnailData"] as? UIImage {
+            attributeSet.thumbnailData = thumbnailData.pngData()
+        }
+                                           
+        if let startDate = itemMap["startDate"] as? Date {
+            attributeSet.endDate = startDate
+        }
         
         let item = CSSearchableItem(uniqueIdentifier: "\(itemMap["uniqueIdentifier"] as? String ?? "")",
                                     domainIdentifier: itemMap["domainIdentifier"] as? String ?? "",
