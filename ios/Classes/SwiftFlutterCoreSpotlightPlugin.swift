@@ -31,8 +31,8 @@ public class SwiftFlutterCoreSpotlightPlugin: NSObject, FlutterPlugin {
             attributeSet.endDate = endDate
         }
                                            
-        if let thumbnailData = itemMap["thumbnailData"] as? UIImage {
-            attributeSet.thumbnailData = thumbnailData.pngData()
+        if let thumbnailImage = itemMap["thumbnailImage"] as? UIImage {
+            attributeSet.thumbnailData = thumbnailImage.pngData()
         }
                                            
         if let startDate = itemMap["startDate"] as? Date {
