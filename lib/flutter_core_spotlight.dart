@@ -37,9 +37,9 @@ class FlutterSpotlightItem {
   final String attributeTitle;
   final String domainIdentifier;
   final String uniqueIdentifier;
-  final DateTime? endDate;
-  final Image? thumbnailImage;
-  final DateTime? startDate;
+  final DateTime? attributeEndDate;
+  final Image? attributeThumbnailImage;
+  final DateTime? attributeStartDate;
 
   Map<String, dynamic> toMap() {
     return {
